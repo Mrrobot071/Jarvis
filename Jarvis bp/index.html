@@ -12,7 +12,11 @@
         height: 100vh;
       }
       #bp-web-widget-container {
-        max-height: 90%;
+        height: 100vh; /* Preenche toda a altura da tela */
+  width: 100%; /* Preenche toda a largura da tela */
+  max-height: 100%; /* Evita que o widget ultrapasse a altura da tela */
+  max-width: 100%; /* Evita que o widget ultrapasse a largura da tela */
+
         width: 480px;
         margin: auto;
         flex-grow: 1;
