@@ -1,73 +1,75 @@
+<!DOCTYPE html>
 <html>
-  <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1 viewport-fit=cover, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+  <title>Jarvis</title>
   <style>
-      body {
-        background-color: white;
-        margin: 0 auto;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-      }
-      #bp-web-widget-container {
-        max-height: 90%;
-        width: 480px;
-        margin: auto;
-        flex-grow: 1;
-      }
-      #bp-web-widget-container div {
-        height: 100%;
-      }
-      .webchatIframe {
-        position: relative !important;
-      }
-      @media only screen and (orientation: portrait),
-        only screen and (orientation: landscape) and (max-width: 900px) {
-        #bp-web-widget-container {
-          width: 100%;
-          height: 100%;
-          max-height: 100%;
-        }
-      }
-    </style>
-    <title>Jarvis</title>
-  </head>
-  <body>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
 
-  <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
-<script>
-  window.botpressWebChat.init({
-      "composerPlaceholder": "Chat with Jarvis",
-      "botConversationDescription": "Jarvis-bot.com.br",
-      "botId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
-      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
-      "messagingUrl": "https://messaging.botpress.cloud",
-      "clientId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
-      "lazySocket": true,
-      "botName": "Jarvis",
-      "avatarUrl": "https://w7.pngwing.com/pngs/571/686/png-transparent-jarvis-logo-edwin-jarvis-iron-man-youtube-marvel-cinematic-universe-male-jarvis-ui-comics-superhero-computer-thumbnail.png",
-      "phoneNumber": "5571992920032",
-      "termsConditions": "Jarvis-bot.com.br",
-      "privacyPolicy": "Jarvis-bot.com.br",
-      "emailAddress": "lnssilvasherlock@gmail.com",
-      "website": "Jarvis-bot.com.br",
-      "stylesheet": "https://cdn.botpress.cloud/webchat/v0/themes/shareable.css",
-      "frontendVersion": "v0",
-      "useSessionStorage": true,
-      "hideWidget": true,
-      "disableAnimations": true,
-      "closeOnEscape": false,
-      "showConversationsButton": false,
-      "enableTranscriptDownload": false,
-      "className": "webchatIframe",
-      "containerWidth": "100%25",
-      "layoutWidth": "100%25",
-      "showCloseButton": false
-  });
-window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
-</script>
+    .container {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
-  </body>
-</html>
+    .chat {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      height: 100vh;
+    }
+
+    .messages {
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .message {
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .from-jarvis {
+      background-color: #0073e6;
+      text-align: left;
+    }
+
+    .from-user {
+      background-color: #444;
+      text-align: right;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="chat">
+      <div class="messages">
+        <div class="message from-jarvis">
+          Hello, I am Jarvis. What can I help you with today?
+        </div>
+        <div class="message from-user">
+          I would like to order a pizza.
+        </div>
+        <div class="message from-jarvis">
+          What kind of pizza would you like?
+        </div>
+        <div class="message from-user">
+          I would like a pepperoni pizza.
+        </div>
+        <div class="message from-jarvis">
+          What size pizza would you like?
+        </div>
+        <div class="message from-user">
+          I would like a large pizza.
