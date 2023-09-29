@@ -5,6 +5,37 @@
   <link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css"><link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: silver;
+            border: 1px solid #000000;
+            padding: 10px;
+            z-index: 9999;
+        }
+
+        .menu-options a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+    </style>
   <style>
     body {
       font-family: 'Futura', sans-serif;
@@ -75,6 +106,27 @@
     }
   </style>
 </head>
+ 
+<body>
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+    <div class="menu-options" id="menu">
+        <a href="https://shimmering-frangollo-bb86a6.netlify.app/">Site</a>
+        <a href="https://www.instagram.com/071lkz/">Instagram</a>
+        <a href="https://wa.me/557192920032">WhatsApp</a>
+        <a href="https://github.com/Mrrobot071">GitHub</a>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+</body>
   <body>
   <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
 <script>
