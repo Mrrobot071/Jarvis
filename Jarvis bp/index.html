@@ -1,35 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Jarvis</title>
+<html lang="en">
+    <head>
+    <title>Jarvis</title>
+  <link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css"><link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
+      font-family: 'Futura', sans-serif;
+      background-color: #000;
+      color: #fff;
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
+      height: auto;
     }
 
-    .container {
-      width: 100%;
+    header {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    main {
       max-width: 800px;
       margin: 0 auto;
+      padding: 20px;
     }
 
-    .chat {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      height: 100vh;
-    }
-
-    .messages {
-      flex: 1;
-      overflow-y: auto;
+    .conversation {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow-y: scroll;
+      height: auto;
     }
 
     .message {
       padding: 10px;
-      margin-bottom: 10px;
+      margin: 5px;
       border-radius: 5px;
     }
 
@@ -50,26 +63,51 @@
       background-color: #333;
       color: #fff;
     }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 10px;
+      }
+
+      .conversation {
+        height: 80vh;
+      }
+    }
   </style>
 </head>
-<body>
-  <div class="container">
-    <div class="chat">
-      <div class="messages">
-        <div class="message from-jarvis">
-          Hello, I am Jarvis. What can I help you with today?
-        </div>
-        <div class="message from-user">
-          I would like to order a pizza.
-        </div>
-        <div class="message from-jarvis">
-          What kind of pizza would you like?
-        </div>
-        <div class="message from-user">
-          I would like a pepperoni pizza.
-        </div>
-        <div class="message from-jarvis">
-          What size pizza would you like?
-        </div>
-        <div class="message from-user">
-          I would like a large pizza.
+  <body>
+  <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with Jarvis",
+      "botConversationDescription": "Jarvis-bot.com.br",
+      "botId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v0",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "ac26bdc9-43dd-450b-9ba6-7d75cd6a61e9",
+      "lazySocket": true,
+      "botName": "Jarvis",
+      "avatarUrl": "https://w7.pngwing.com/pngs/571/686/png-transparent-jarvis-logo-edwin-jarvis-iron-man-youtube-marvel-cinematic-universe-male-jarvis-ui-comics-superhero-computer-thumbnail.png",
+      "phoneNumber": "5571992920032",
+      "termsConditions": "Jarvis-bot.com.br",
+      "privacyPolicy": "Jarvis-bot.com.br",
+      "emailAddress": "lnssilvasherlock@gmail.com",
+      "website": "Jarvis-bot.com.br",
+      "stylesheet": "https://cdn.botpress.cloud/webchat/v0/themes/shareable.css",
+      "frontendVersion": "v0",
+      "useSessionStorage": true,
+      "hideWidget": true,
+      "disableAnimations": false,
+      "closeOnEscape": false,
+      "showConversationsButton": false,
+      "enableTranscriptDownload": false,
+      "className": "webchatIframe",
+      "containerWidth": "100%25",
+      "layoutWidth": "100%25",
+      "showCloseButton": false
+  });
+window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
+</script> 
+</body></html>
+ 
+ 
