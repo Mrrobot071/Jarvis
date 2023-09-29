@@ -4,65 +4,76 @@
     <title>Jarvis</title>
   <link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css"><link rel="stylesheet" href="https://cdn.botpress.cloud/webchat/v0/inject.css">
     <meta charset="UTF-8">
- 
-    <style>
-        body {
-            font-family: 'Futura', sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: 'Futura', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      height: auto;
+    }
 
-        header {
-            background-color: #333;
-            text-align: center;
-            padding: 10px;
-        }
+    header {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
 
-        h1 {
-            margin: 0;
-        }
+    h1 {
+      margin: 0;
+    }
 
-        main {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-        .conversation {
-            background-color: #111;
-            padding: 10px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            overflow-y: scroll;
-            height: 100vh;
-        }
+    .conversation {
+      background-color: #111;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      overflow-y: scroll;
+      height: auto;
+    }
 
-        .message {
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-        }
+    .message {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
 
-        .from-jarvis {
-            background-color: #0073e6;
-            text-align: left;
-        }
+    .from-jarvis {
+      background-color: #0073e6;
+      text-align: left;
+    }
 
-        .from-user {
-            background-color: #444;
-            text-align: right;
-        }
+    .from-user {
+      background-color: #444;
+      text-align: right;
+    }
 
-        input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            background-color: #333;
-            color: #fff;
-        }
-    </style>
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 10px;
+      }
+
+      .conversation {
+        height: 80vh;
+      }
+    }
+  </style>
 </head>
   <body>
   <script src="https://cdn.botpress.cloud/webchat/v0/inject.js"></script>
@@ -98,4 +109,5 @@
 window.botpressWebChat.onEvent(function () { window.botpressWebChat.sendEvent({ type: 'show' }) }, ['LIFECYCLE.LOADED']);
 </script> 
 </body></html>
+ 
  
