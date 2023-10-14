@@ -158,6 +158,23 @@ display: flex; justify-content: center; align-items: center; position: absolute;
     }
   </style>
 </head>
+      
+<body>
+    <!-- Seu código HTML existente aqui -->
+
+    <!-- Botão de reinício -->
+    <div id="reset-button" style="position: fixed; top: 25px; right: 15%; z-index: 9999; cursor: pointer; font-size: 24px;">
+        <!-- Símbolo de reinicialização (setas circulares complementares) -->
+        &#8634;
+    </div>
+
+    <script>
+        // Função para recarregar a página quando o botão é clicado
+        document.getElementById("reset-button").addEventListener("click", function() {
+            location.reload();
+        });
+    </script>
+</body> 
 <body>
 <div class="loader-container">
     <div class="loader"></div>
